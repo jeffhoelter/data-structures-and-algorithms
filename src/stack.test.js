@@ -22,6 +22,15 @@ test("pop test", () => {
   expect(myStack.count()).toBe(3);
 });
 
+test("pop test with no elements", () => {
+  var myStack = new Stack();
+  myStack.push("Test1");
+  expect(myStack.pop()).toBe("Test1");
+  expect(myStack.count()).toBe(0);
+  expect(myStack.pop()).toBe(-1);
+  expect(myStack.count()).toBe(0);
+});
+
 test("pop test complicated", () => {
   var myStack = new Stack();
   myStack.push("Test1");

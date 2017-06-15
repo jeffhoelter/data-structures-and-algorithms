@@ -60,14 +60,18 @@ Stack.prototype.push = function(value) {
 // Time complexity:
 
 Stack.prototype.pop = function() {
-  const returnString = this.peek();
-  this.storage = this.storage.slice(0, this.storage.lastIndexOf("\-"));
-  return returnString;
+  if (this.count() !== 0) {
+    const returnString = this.peek();
+    this.storage = this.storage.slice(0, this.storage.lastIndexOf("-"));
+    return returnString;
+  } else {
+    return -1;
+  }
 };
 // Time complexity:
 
 Stack.prototype.peek = function() {
-  return this.storage.slice(this.storage.lastIndexOf("\-") + 1);
+  return this.storage.slice(this.storage.lastIndexOf("-") + 1);
 };
 // Time complexity:
 
