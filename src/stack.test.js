@@ -46,3 +46,24 @@ test("pop test complicated", () => {
   expect(myStack.pop()).toBe("Test1");
   expect(myStack.count()).toBe(0);
 });
+
+test("count simple test", () => {
+  var myStack = new Stack();
+  expect(myStack.count()).toBe(0);
+  myStack.push("Test1");
+  expect(myStack.count()).toBe(1);
+  myStack.push("Test2");
+  expect(myStack.count()).toBe(2);
+  myStack.push("Test3");
+  expect(myStack.count()).toBe(3);
+  myStack.push("Test4");
+  expect(myStack.count()).toBe(4);
+  myStack.pop();
+  expect(myStack.count()).toBe(3);
+  myStack.pop();
+  expect(myStack.count()).toBe(2);
+  myStack.pop();
+  expect(myStack.count()).toBe(1);
+  myStack.pop();
+  expect(myStack.count()).toBe(0);
+});
