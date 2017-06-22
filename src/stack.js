@@ -64,9 +64,8 @@ Stack.prototype.pop = function() {
     const returnString = this.peek();
     this.storage = this.storage.slice(0, this.storage.lastIndexOf("-"));
     return returnString;
-  } else {
-    return -1;
   }
+  return -1;
 };
 // Time complexity:
 
